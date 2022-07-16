@@ -8,7 +8,7 @@
     <h1>Hello World!</h1>
     <h2>{{ 28 * 7}}</h2>
     <h3>Random Number: {{rand_num}}</h3>
-    <a href="{{ url_for('blog_page') }}">Go to Blog</a>
+    <a href="{{ url_for('blog_page', num=5) }}">Go to Blog</a>
 </body>
 <footer>
     <h6>Copyright {{year}}. Built by Karoly Burgyan </h6>

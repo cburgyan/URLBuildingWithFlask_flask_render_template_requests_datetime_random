@@ -2,7 +2,6 @@ from flask import Flask, render_template
 import random
 import datetime
 import requests
-import ast
 
 
 app = Flask(__name__)
@@ -43,8 +42,8 @@ def guess_age_and_gender(name):
     return render_template('age_and_gender.html', name=name.title(), age=age, gender=gender)
 
 
-@app.route('/blog')
-def blog_page():
+@app.route('/blog/<num>')
+def blog_page(num):
     url = 'https://api.npoint.io/ec84679d2403beee8160'
     blog_posts_json = requests.get(url).json()
     print(blog_posts_json)
